@@ -1,0 +1,117 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Result</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+
+    function res(){
+        let p=Number(document.getElementById("p").value);
+        let c=Number(document.getElementById("c").value);
+        let m=Number(document.getElementById("m").value);
+        let h=Number(document.getElementById("h").value);
+        let e=Number(document.getElementById("e").value);
+        let tt=p+c+m+h+e;
+        document.getElementById("t").innerHTML=tt;
+        let per=tt/5;
+        document.getElementById("u").innerHTML=per;
+    if(per>75){
+        document.getElementById("ui").innerHTML="A+";
+        }
+        else if(per<75 &&per>60){
+            
+        document.getElementById("ui").innerHTML="A";
+        }
+        else if(per<60 &&per>50){
+            
+            document.getElementById("ui").innerHTML="B";
+            }
+            else if(per<50 &&per>40){
+            
+            document.getElementById("ui").innerHTML="C";
+            }
+
+            else{
+                document.getElementById("ui").innerHTML="FAIL";
+            }
+    
+    
+
+        }
+    
+  </script>
+</head>
+<body>
+    
+<div class="jumbotron text-cent">
+  <h1>Student Result System</h1>
+ <marquee> <p>Uttrakhand Technical University</p> </marquee>
+</div>
+<center>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">physics</label>
+        <input type="text" id="p" class="form-control" placeholder="enter physics marks">
+      </div>
+      
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">chemistry</label>
+        <input type="text" id="c" class="form-control" placeholder="enter chemistry marks">
+      </div>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">maths</label>
+        <input type="text" id="m" class="form-control" placeholder="enter maths marks">
+      </div>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">hindi</label>
+        <input type="text" id="h" class="form-control" placeholder="enter hindi marks">
+      </div>
+      
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">english</label>
+        <input type="text" id="e" class="form-control" placeholder="enter english marks">
+      </div>
+      <button type="button" class="btn btn-success" onclick="res()">show result</button>
+
+
+    </center>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+           
+            <div class="card-body">
+              <h5 class="card-title">total marks</h5>
+              <p class="card-text"></p>
+              <a href="#"id="t" class="btn btn-primary">780</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 50rem;">
+        
+            <div class="card-body">
+              <h5 class="card-title">percentage</h5>
+              <p class="card-text"></p>
+              <a href="#"id="u" class="btn btn-primary">89</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 50rem;">
+            <div class="card-body">
+              <h5 class="card-title">grade</h5>
+              <p class="card-text"></p>
+              <a href="#"id="ui" class="btn btn-primary">A</a>
+            </div>
+          </div>       
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
